@@ -9,8 +9,6 @@ import java.util.StringTokenizer;
 public class Main {
     private static Stack<Integer> stack = new Stack<>();
 
-    private static String s;
-
     private static StringTokenizer st;
 
     private static StringBuilder sb = new StringBuilder();
@@ -21,14 +19,13 @@ public class Main {
 
         for (int i = 0; i < n; i++) {
             st = new StringTokenizer(br.readLine());
-            s = st.nextToken();
-            makeStack();
+            makeStack(st.nextToken());
         }
 
         System.out.println(sb);
     }
 
-    private static void makeStack() {
+    private static void makeStack(String s) {
 
         if (s.equals("push")) {
             stack.push(Integer.parseInt(st.nextToken()));
